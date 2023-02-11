@@ -127,7 +127,7 @@
                     <parallel>tests</parallel>
                     <suiteXmlFiles>
                         <!--suppress UnresolvedMavenProperty -->
-                        <suiteXmlFile>\src\test\resources\com.simplicia.web.dat\CreateDATUIValidationTest.xml
+                        <suiteXmlFile>${xmlSuiteFileName}
                         </suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
