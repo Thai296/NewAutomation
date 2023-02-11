@@ -280,11 +280,12 @@ public class SeleniumTestSupport {
                 int count=0;
                 LOGGER.info("here "+count++);//0
                 LOGGER.info("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  set driver " + System.getProperty("os.name") + " set driver >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-                String chromeDriver = "H:\\chromedriver\\chromedriver.exe";
+                String chromeDriver = "";
+                //                String chromeDriver = "H:\\chromedriver\\chromedriver.exe";
                 LOGGER.info("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  " + System.getProperty("os.name") + "  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-               // chromeDriver = System.getProperty("user.dir") + "/" + CHROMEDRIVER_PATH;
+//                String chromeDriver = System.getProperty("user.dir") + "/" + CHROMEDRIVER_PATH;
                 String driverPath = singleSharedProperties.getProperty("selenium.driver.path", getChromeDriverPath());
-//                chromeDriver = getDriverPath(driverPath);
+                chromeDriver = getDriverPath(driverPath);
                 if (isUnix() || isMac()) {
                     LOGGER.info("here "+count++);//1
                     boolean f = new File(chromeDriver).setExecutable(true);
